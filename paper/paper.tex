@@ -1,7 +1,7 @@
 % Preamble
 \documentclass[11pt, letterpaper]{article}
-\usepackage{fontspec}
-\setmainfont{Times New Roman}
+\usepackage{newtxtext}
+\usepackage{newtxmath}
 \title{Reflection Paper -- ECO 414}
 \author{Joe White}
 \date{\today}
@@ -20,5 +20,55 @@ The motivation behind this paper is to understand how ownership structure, geogr
 \subsection{What does the paper accomplish?}
 \subsection{Methodology}
 \subsection{Results}
+
+\section{Model}
+\subsection{Demand}
+\begin{equation}
+V_{i,j} = X^{\prime}\beta - D_{i,j}\delta - P_{j}\gamma + \eta_{i,j}
+\end{equation}
+
+\begin{equation}
+V_{i,0} = \beta_{0} + M_{i}\pi + \eta_{i,0}
+\end{equation}
+
+\begin{equation}
+S_{i,b}(P, X, M \mid \beta, \delta, \gamma, \pi) = \int_{A_j} f(\eta_{i})\,d\eta_{i}
+\end{equation}
+
+\begin{equation}
+A_j = \{\eta_i \mid (V_{i,j} > V_{i,t} \;\forall t \neq j) \cap (V_{i,j} > V_{i,0})\}
+\end{equation}
+
+\begin{equation}
+S_{j,b}(P, X, M \mid \beta, \delta, \gamma, \pi)
+=
+\frac{
+    e^{X'_j \beta - D_{b,j} \delta - P_j \gamma}
+}{
+    e^{\pi M} + \sum_{t=1}^{J} e^{X'_t \beta - D_{b,t} \delta - P_t \gamma}
+}.
+\end{equation}
+
+\begin{equation}
+Q_{j}(P,X \mid \beta, \delta, \gamma, \pi) = \sum_{b} \sum_{M} h(b,M)S_{i,b}(P, X, M \mid \beta, \delta, \gamma, \pi)
+\end{equation}
+
+\begin{equation}
+\frac{\partial Q_{j}(P,X \mid \beta, \delta, \gamma, \pi)}{\partial P_k} = \frac{\partial \sum_{b} \sum_{M} h(b,M)S_{i,b}(P, X, M \mid \beta, \delta, \gamma, \pi)}{\partial P_k}
+\end{equation}
+
+\subsection{Supply}
+
+\begin{equation}
+\Pi_f = \sum_{j \in F_f} (r_{k} P_{j} Q_{j}(P) - c_{j} Q_{j}(P) - FC_j)
+\end{equation}
+
+\begin{equation}
+\Pi_f = \sum_{j \in F_f}(P_j Q_{j}(P) - (\frac{c_j}{r_k})Q_{j}(P) - \frac{FC_j}{r_k})
+\end{equation}
+
+\begin{equation}
+C_j = (C_k + \varepsilon_j)
+\end{equation}
 
 \end{document}
