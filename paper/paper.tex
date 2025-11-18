@@ -2,7 +2,7 @@
 \documentclass[11pt, letterpaper]{article}
 \usepackage{newtxtext}
 \usepackage{newtxmath}
-\title{Reflection Paper -- ECO 414}
+\title{Reflection Paper -- Mathematical Economics}
 \author{Joe White}
 \date{\today}
 
@@ -70,5 +70,78 @@ Q_{j}(P,X \mid \beta, \delta, \gamma, \pi) = \sum_{b} \sum_{M} h(b,M)S_{i,b}(P, 
 \begin{equation}
 C_j = (C_k + \varepsilon_j)
 \end{equation}
+
+\begin{equation}
+Q_{j}(P) = \sum_{r \in F_f} (P_{r} - C_{k} - \varepsilon_{r}) \frac{\partial Q_{r}(P)}{\partial P_j} = 0
+\end{equation}
+
+\begin{equation}
+\Omega_{j,r} = 
+\begin{cases}
+\displaystyle \frac{\partial Q_r}{\partial P_j}, & \text{if $r$ and $j$ have the same owner}, \\[8pt]
+0, & \text{otherwise}.
+\end{cases}
+\end{equation}
+
+\begin{equation}
+Q(P) + \Omega(P - C - \varepsilon) = 0
+\end{equation}
+
+\begin{equation}
+Q(P, X \mid \theta) + \Omega(P, X \mid \theta)(P - C - \varepsilon) = 0
+\end{equation}
+
+\begin{equation}
+\varepsilon = P - C + \Omega(P, X \mid \theta)^{-1} Q(P, X \mid \theta)
+\end{equation}
+
+\begin{equation}
+E[\varepsilon_{j}(\theta^{*}) \mid Z_j] = 0
+\end{equation}
+
+\begin{subequations}
+\label{}
+
+\begin{align}
+G_J(\theta) 
+&= \frac{1}{J} \sum_{j=1}^{J} Z_j \, \varepsilon_j(\theta)
+\label{}
+\\[8pt]
+G_J(\theta) 
+&= \frac{1}{J} \sum_{j=1}^{J}
+    \left[
+        R_{18\text{-}29}
+        \frac{Q_j(M_{\text{Age}},\theta)}{\text{Pop}(M_{\text{Age}})}
+        \;-\;
+        R_{\text{Age}}
+        \frac{Q_j(M_{18\text{-}29},\theta)}{\text{Pop}(M_{18\text{-}29})}
+    \right]
+\label{}
+\\[8pt]
+G_J(\theta) 
+&= \frac{1}{J} \sum_{j=1}^{J}
+    \left[
+        R_{\text{Male}}
+        \frac{Q_j(M_{\text{Female}},\theta)}{\text{Pop}(M_{\text{Female}})}
+        \;-\;
+        R_{\text{Female}}
+        \frac{Q_j(M_{\text{Male}},\theta)}{\text{Pop}(M_{\text{Male}})}
+    \right]
+\label{}
+\\[8pt]
+G_J(\theta) 
+&= \frac{1}{J} \sum_{j=1}^{J}
+    \left[
+        R_{\text{Black}}
+        \frac{Q_j(M_{\text{White}},\theta)}{\text{Pop}(M_{\text{White}})}
+        \;-\;
+        R_{\text{White}}
+        \frac{Q_j(M_{\text{Black}},\theta)}{\text{Pop}(M_{\text{Black}})}
+    \right]
+\label{}
+\end{align}
+
+\end{subequations}
+
 
 \end{document}
