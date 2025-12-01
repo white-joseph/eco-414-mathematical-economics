@@ -39,7 +39,7 @@ Thomadsen’s empirical setting is the fast food industry in Santa Clara County,
 
 To construct the dataset, Thomadsen collected prices and outlet characteristics by personally visiting each restaurant. He recorded menu prices, documented outlet features, and mapped precise geographic coordinates. Corporate owned stores and outlets located inside airports or military bases were excluded to avoid atypical pricing environments. To maintain comparability across locations, he only focuses on the price of the Big Mac and Whopper value meals, which are the most commonly purchased items at McDonald’s and Burger King. The summary statistics of his dataset are below.
 
-\begin{table}[H]  % requires \usepackage{float}
+\begin{table}[H]
 \centering
 \begin{threeparttable}
 \caption{Summary Statistics}
@@ -49,54 +49,46 @@ To construct the dataset, Thomadsen collected prices and outlet characteristics 
 
 \begin{tabularx}{\textwidth}{Xccccc}
 \toprule
-\textbf{Variable} & \textbf{N} & \textbf{Mean} & \textbf{Standard Deviation} & \textbf{Minimum} & \textbf{Maximum} \\
+\textbf{Variable} & \textbf{N} & \textbf{Mean} & \textbf{Std. Dev.} & \textbf{Min} & \textbf{Max} \\
 \midrule
-Burger King price                 & 38 & 3.26  & .11   & 3.19  & 3.69 \\
-McDonald's price                  & 41 & 3.46  & .27   & 2.99  & 4.09 \\
-Burger King dummy                 & 79 & .481  & .503  & 0     & 1    \\
-Number BK/McD within 2 miles      & 79 & 3.835 & 1.918 & 1     & 8    \\
-Number co-owned within 2 miles    & 79 & .532  & .765  & 0     & 2    \\
-Number other hamburger within 2mi & 79 & 4.443 & 1.831 & 0     & 9    \\
-Distance to BK/McDonald's         & 79 & .691  & .488  & .006  & 1.933 \\
-Multiple-owner dummy              & 79 & .633  & .485  & 0     & 1    \\
-Distance to co-owned              & 79 & 1.426 & 1.550 & 0     & 5    \\
-Distance to other hamburger       & 79 & .630  & .548  & .005  & 2.739 \\
-Number directions                 & 79 & 2.671 & .930  & 1     & 4    \\
-Playland dummy                    & 79 & .279  & .451  & 0     & 1    \\
-Drive-thru dummy                  & 79 & .684  & .468  & 0     & 1    \\
-Mall dummy                        & 79 & .089  & .286  & 0     & 1    \\
-Population density                & 79 & 6{,}454.6 & 4{,}251.4 & 11.4 & 20{,}964.6 \\
-Worker density                    & 79 & 934.6    & 5{,}879.8 & 0     & 49{,}260.1 \\
-Fraction nearby kids              & 79 & .241     & .057     & .109  & .334 \\
-Fraction nearby 30--64            & 79 & .447     & .041     & .334  & .530 \\
-Fraction nearby >64               & 79 & .084     & .027     & .038  & .134 \\
-Fraction male                     & 79 & .506     & .012     & .484  & .541 \\
-Fraction black                    & 79 & .038     & .019     & .008  & .084 \\
-Fraction Asian                    & 79 & .169     & .098     & .034  & .401 \\
-Fraction Hispanic                 & 79 & .223     & .140     & .050  & .558 \\
-Median income (\$)                & 79 & 46{,}250 & 7{,}811  & 28{,}750 & 67{,}500 \\
+Burger King price                 & 38 & 3.26    & 0.11    & 3.19    & 3.69    \\
+McDonald's price                  & 41 & 3.46    & 0.27    & 2.99    & 4.09    \\
+Burger King dummy                 & 79 & 0.481   & 0.503   & 0       & 1       \\
+Number BK/McD within 2 miles      & 79 & 3.835   & 1.918   & 1       & 8       \\
+Number co-owned within 2 miles    & 79 & 0.532   & 0.765   & 0       & 2       \\
+Number other hamburger within 2mi & 79 & 4.443   & 1.831   & 0       & 9       \\
+Distance to BK/McDonald's (miles) & 79 & 0.691   & 0.488   & 0.006   & 1.933   \\
+Distance to co-owned (miles)      & 79 & 1.426   & 1.550   & 0       & 5       \\
+Distance to other hamburger (miles)&79& 0.630   & 0.548   & 0.005   & 2.739   \\
+Multiple-owner dummy              & 79 & 0.633   & 0.485   & 0       & 1       \\
+Drive-thru dummy                  & 79 & 0.684   & 0.468   & 0       & 1       \\
+Mall dummy                        & 79 & 0.089   & 0.286   & 0       & 1       \\
+Population density (per mi$^2$)   & 79 & 6{,}454.6 & 4{,}251.4 & 11.4  & 20{,}964.6 \\
+Worker density (per mi$^2$)       & 79 & 934.6   & 5{,}879.8 & 0      & 49{,}260.1 \\
+Median income (\$)                & 79 & 46{,}250 & 7{,}811   & 28{,}750 & 67{,}500 \\
 \bottomrule
 \end{tabularx}
 
 \begin{tablenotes}[flushleft]
 \footnotesize
-\item Note: Population density and worker density are measured as (number of people)/(mile$^2$).
+\item Note: Population and worker density are measured as (number of people)/(mile$^2$).
 \end{tablenotes}
 
 \end{threeparttable}
 \end{table}
 
+
 This setting provides a clean and realistic environment for studying how geography and ownership structure interact to determine equilibrium prices. The combination of detailed price data, geographic information, and natural variation in franchise ownership allows the structural model to estimate demand and simulate counterfactual pricing outcomes under alternative ownership.
 
 \section{Empirical Strategy and Theoretical Model}
 
-The motivation for incorporating a structural model in Thomadsen’s analysis is that reduced-form regressions, while useful for establishing correlations, cannot fully characterize the economic mechanisms that determine prices. Thomadsen begins with descriptive regressions that relate prices to ownership concentration, competitor distance, and outlet attributes. These regressions consistently show that prices are higher when nearby outlets share the same owner and lower when competing outlets are closer. This provides important empirical motivation by demonstrating that ownership and geography matter for pricing. However, the regressions have clear limitations: they rely on ad-hoc measures of competition, cannot account for the full geometry of market layouts, and do not identify causal effects or equilibrium behavior. As Thomadsen emphasizes, these regressions cannot predict how prices would change under alternative ownership structures because they do not embed the firms’ profit-maximization or the strategic interactions across outlets.
+The motivation for incorporating a structural model in Thomadsen’s analysis is that regressions, while useful for establishing correlations, cannot fully explain the mechanisms that determine prices. Thomadsen begins with regressions that relate prices to ownership concentration, competitor distance, and outlet attributes. These regressions show that prices are higher when nearby outlets share the same owner and lower when competing outlets are closer. This provides important empirical motivation by demonstrating that ownership and geography matter for pricing. However, the regressions have clear limitations: they cannot account for the full market layouts, and do not identify causal effects or equilibrium behavior. As Thomadsen emphasizes, these regressions cannot predict how prices would change under alternative ownership structures because they do not embed the firms’ profit maximization or the strategic interactions across outlets.
 
-A structural model overcomes these limitations by explicitly modeling consumer demand, geographic substitution patterns, and firms’ pricing decisions under multi-store ownership. By recovering underlying primitives—such as utility parameters, distance disutility, marginal costs, and markups—the structural approach allows the researcher to simulate counterfactual mergers and compute equilibrium prices under different ownership configurations. This deeper modeling framework therefore provides a more credible and policy-relevant tool for analyzing the competitive effects of mergers than reduced-form regressions alone.
+A structural model overcomes these limitations by explicitly modeling consumer demand, geographic  patterns, and firms’ pricing decisions under multi store ownership. The structural approach allows us to simulate counterfactual mergers and compute equilibrium prices under different ownership configurations. This modeling framework therefore provides a more credible and policy relevant tool for analyzing the competitive effects of mergers than reduced form regressions alone.
 
 \subsection{Reduced Form Model}
 
-Thomadsen estimates a series of regressions to show how prices vary with local competition and ownership concentration. In his paper, he does not present the regression equations explicitly, but a representative specification consistent with Table 2 can be written as
+Thomadsen estimates a series of regressions to show how prices vary with local competition and ownership concentration. In his paper, he does not present the regression equations explicitly, but a representative specification consistent with Table~\ref{tab:regression} can be written as
 
 \begin{equation}
 \label{eq:regression}
@@ -299,6 +291,44 @@ G_J(\theta)
 \end{align}
 
 \end{subequations}
+
+\subsection{Results}
+
+\begin{table}[H]
+\centering
+\begin{threeparttable}
+\caption{Descriptive Regression Results \\ \small Dependent Variable: $\log(\text{Price})$}
+\label{tab:regression}
+\small
+
+\begin{tabularx}{0.8\textwidth}{lcc}
+\toprule
+\textbf{Variable} & \textbf{Coefficient} & \textbf{Std. Error} \\
+\midrule
+Chain dummy                   & $0.048^{**}$  & (0.013) \\
+Number competing outlets      & $-0.035^{*}$  & (0.004) \\
+Number co-owned outlets       & $0.025^{**}$  & (0.009) \\
+Distance to competitor        & $0.028^{*}$   & (0.014) \\
+Distance to co-owned outlet   & $-0.012^{*}$  & (0.006) \\
+Drive-thru dummy              & 0.014         & (0.014) \\
+Population density            & $0.396^{**}$  & (0.167) \\
+Worker density                & $-0.343^{*}$  & (0.143) \\
+\midrule
+$R^2$                         & 0.513         &         \\
+\bottomrule
+\end{tabularx}
+
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item Standard errors in parentheses. Statistical significance:
+\textsuperscript{***} $p<0.01$, 
+\textsuperscript{**} $p<0.05$, 
+\textsuperscript{*} $p<0.10$.
+\end{tablenotes}
+
+\end{threeparttable}
+\end{table}
+
 
 \begin{thebibliography}{9}
 
