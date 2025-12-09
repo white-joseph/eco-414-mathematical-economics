@@ -1,10 +1,9 @@
 % Preamble
-\documentclass[12pt, letterpaper]{article}
+\documentclass[11pt, letterpaper]{article}
 
+\usepackage[margin=1.5in]{geometry}
 \usepackage{newtxtext}
 \usepackage{newtxmath}
-%\usepackage{fontspec}
-%\setmainfont{Times New Roman}
 \usepackage{booktabs}
 \usepackage{threeparttable}
 \usepackage{tabularx}
@@ -21,30 +20,34 @@
 
 \section{Introduction} 
 
-The paper I am analyzing in this reflection paper is \emph{The Effect of Ownership Structure on Prices in Geographically Differentiated Industries} by Raphael Thomadsen (2005), which was published in the RAND Journal of Economics. His paper discusses how ownership structure and geographic differentiation jointly shape pricing in retail markets. He presents results using two different methodologies. First, regression results which give estimates that show a connection between ownership, geography, and prices. Secondly, he presents a structural model that estimates demand and supply that includes the geographical element of his paper. From this structural model he conducts experiments to see how differing geographies affect pricing under different ownership structures. Thomadsen finds that mergers between franchisees can significantly increase prices. In the data, some outlets charge substantially higher prices than they would have under independent ownership. The price effects are strongest when commonly owned outlets are located close to one another, because the owner internalizes the competitive pressure between nearby stores. However, the study also finds that even outlets located far enough apart, such that they would not directly influence each other’s pricing under separate ownership, still experience price increases after consolidation. This shows that the impact of a merger extends beyond immediate geographic proximity. The analysis further indicates that the price effects of consolidation differ across chains, suggesting that antitrust authorities should focus their attention more heavily on mergers involving firms whose consumers view outlets as close substitutes.
+This reflection examines \emph{The Effect of Ownership Structure on Prices in Geographically Differentiated Industries} by Raphael Thomadsen (2005), published in the \emph{RAND Journal of Economics}. The paper studies how ownership structure and geographic differentiation shape pricing in retail markets. Thomadsen presents results using two complementary methodologies. First, he reports regression estimates that document a relationship between ownership, geography, and prices. Second, he develops a structural model of demand and supply that incorporates the geographic layout of outlets. Using this structural model, he conducts counterfactual experiments to study how different ownership structures and spatial configurations affect equilibrium prices.
+
+Thomadsen finds that mergers between franchisees can significantly increase prices. In the data, some outlets charge substantially higher prices than they would have under independent ownership. The price effects are strongest when commonly owned outlets are located close to one another, because the owner internalizes competition between nearby stores. However, the study also finds that even outlets located far enough apart that they would not directly influence each other’s pricing under separate ownership still experience price increases after a merger. This shows that the impact of a merger extends beyond immediate geographic proximity. The analysis further indicates that the price effects of consolidation differ across chains, suggesting that antitrust authorities should focus their attention more heavily on mergers involving firms whose consumers view outlets as close substitutes.
 
 \section{Motivation and Background}
 
 \subsection{Motivation}
 
-The central motivation of Thomadsen’s paper is to understand how ownership structure and geographic differentiation jointly shape pricing in retail markets. Many consumer facing industries such as fast food, retail, gasoline, and grocery are composed of firms that operate multiple outlets spread across local geographic areas called franchises. In these settings, changes in ownership structure, such as mergers between nearby outlets, may change competitive incentives by allowing firms to internalize price competition across the outlets they control.
+The central motivation of Thomadsen’s paper is to understand how ownership structure and geographic differentiation jointly shape pricing in retail markets. Many consumer-facing industries such as fast food, retail, gasoline, and grocery are composed of firms that operate multiple outlets spread across local geographic areas as franchises. In these settings, changes in ownership structure, such as mergers between nearby outlets, may change competitive incentives by allowing firms to internalize price competition across the outlets they control.
 
-This raises an important policy question: \textit{How do mergers in geographically differentiated industries affect equilibrium prices?} This is the question that Thomadsen is answering in his paper. Addressing this question matters for antitrust authorities such as the Federal Trade Commission (FTC), who evaluate mergers partly on the basis of whether they increase market power and harm consumers. Determining the price effects of multi-store ownership is therefore directly relevant for merger review and competition policy.
+This raises an important policy question: \textit{How do mergers in geographically differentiated industries affect equilibrium prices?} This is the question that Thomadsen aims to answer. Addressing this question matters for antitrust authorities such as the Federal Trade Commission (FTC), who evaluate mergers partly on the basis of whether they increase market power and harm consumers. Determining the price effects of multi-store ownership is therefore directly relevant for merger review and competition policy.
 
-The contribution of this paper is to combine literature that had typically been studied separately. Previous research examined either (i) the role of geography in price competition or (ii) the implications of multi store ownership, but few papers had incorporated both elements in a structural framework. Thomadsen fills this gap in the literature by estimating a model of demand and firm pricing that explicitly accounts for spatial differentiation and ownership structure, allowing him to simulate how prices would change under alternative merger scenarios.
+The contribution of this paper is to combine strands of the literature that had typically been studied separately. Previous research examined either (i) the role of geography in price competition or (ii) the implications of multi-store ownership, but few papers incorporated both elements in a structural framework. Thomadsen fills this gap by estimating a model of demand and firm pricing that explicitly accounts for spatial differentiation and ownership structure, allowing him to simulate how prices would change under different merger scenarios.
 
-A key novelty of the paper is that it integrates spatial differentiation with multi-store ownership in a fully structural pricing model. Earlier empirical studies of spatial competition typically held ownership constant and focused on how geographic distance affects substitution patterns and price sensitivity. Likewise, previous work on multi-store ownership often abstracted away from geography, treating markets as undifferentiated or relying on aggregate data. Thomadsen’s framework brings these two dimensions together by embedding ownership structure directly into firms' profit-maximization problems while also modeling how consumers substitute across geographically dispersed outlets. This allows the analysis to capture how a merger between nearby franchisees alters not only direct competition between two outlets, but also the broader pattern of consumer substitution across space. As a result, the paper can generate policy-relevant counterfactuals that earlier approaches were not able to evaluate.
+A key novelty of the paper is that it integrates spatial differentiation with multi-store ownership in a fully structural pricing model. Earlier empirical studies of spatial competition typically held ownership constant and focused on how geographic distance affects substitution patterns and price sensitivity. Similarly, previous work on multi-store ownership often abstracted from geography, treating markets as undifferentiated or relying on aggregate data. Thomadsen’s framework brings these two perspectives together by incorporating ownership structure directly into firms' profit maximization problems while also modeling how consumers substitute across geographically dispersed outlets. This allows the analysis to capture how a merger between nearby franchisees alters not only direct competition between two outlets, but also the broader pattern of consumer substitution. As a result, the paper can generate policy-relevant counterfactuals that earlier approaches were not able to evaluate.
 
 \subsection{Background}
 
-Thomadsen’s empirical setting is the fast food industry in Santa Clara County, California, focusing on McDonald’s and Burger King outlets. These chains are perfect for this type of analysis for several reasons. First, they are two of the largest fast food brands in the United States and are a substantial share of local consumption in the study area. Second, most outlets are franchised rather than corporately owned, creating variation in ownership structure across locations. Third, their menu offerings are very standardized, which helps isolate pricing incentives rather than product differences.
+Thomadsen’s empirical setting is the fast food industry in Santa Clara County, California, focusing on McDonald’s and Burger King outlets. These chains are well-suited for this type of analysis for several reasons. First, they are two of the largest fast food brands in the United States and represent a substantial share of local consumption in the study area. Second, most outlets are franchised rather than corporately owned, creating variation in ownership structure across locations. Third, their menus are highly standardized, which helps isolate pricing incentives rather than product differences.
 
-To construct the dataset, Thomadsen collected prices and outlet characteristics by personally visiting each restaurant. He recorded menu prices, documented outlet features, and mapped precise geographic coordinates. Corporate owned stores and outlets located inside airports or military bases were excluded to avoid atypical pricing environments. To maintain comparability across locations, he only focuses on the price of the Big Mac and Whopper value meals, which are the most commonly purchased items at McDonald’s and Burger King. Summary statistics for the sample are reported in Table~\ref{tab:summary}
+To construct the dataset, Thomadsen collected prices and outlet characteristics by personally visiting each restaurant. He recorded menu prices, documented outlet features, and mapped precise geographic coordinates. Corporate-owned stores and outlets located inside airports or military bases were excluded to avoid atypical pricing environments. He also focuses only on the price of the Big Mac and Whopper value meals, which are the most commonly purchased items at McDonald’s and Burger King. Some of the summary statistics for the sample are reported in Table~\ref{tab:summary}.
+
+This setting provides a clean and realistic environment for studying how geography and ownership structure interact to determine equilibrium prices. The combination of detailed price data, geographic information, and natural variation in franchise ownership allows the structural model to estimate demand and simulate counterfactual pricing outcomes under alternative ownership.
 
 \begin{table}[H]
 \centering
 \begin{threeparttable}
-\caption{Summary Statistics}
+\caption{Summary Statistics.}
 \label{tab:summary}
 \small
 \setlength{\tabcolsep}{4pt}
@@ -58,7 +61,7 @@ McDonald's price                  & 41 & 3.46    & 0.27    & 2.99    & 4.09    \
 Burger King dummy                 & 79 & 0.481   & 0.503   & 0       & 1       \\
 Number BK/McD within 2 miles      & 79 & 3.835   & 1.918   & 1       & 8       \\
 Number co-owned within 2 miles    & 79 & 0.532   & 0.765   & 0       & 2       \\
-Number other hamburger within 2mi & 79 & 4.443   & 1.831   & 0       & 9       \\
+Number other hamburger within 2 miles & 79 & 4.443   & 1.831   & 0       & 9       \\
 Distance to BK/McDonald's (miles) & 79 & 0.691   & 0.488   & 0.006   & 1.933   \\
 Distance to co-owned (miles)      & 79 & 1.426   & 1.550   & 0       & 5       \\
 Distance to other hamburger (miles)&79& 0.630   & 0.548   & 0.005   & 2.739   \\
@@ -79,14 +82,13 @@ Median income (\$)                & 79 & 46{,}250 & 7{,}811   & 28{,}750 & 67{,}
 \end{threeparttable}
 \end{table}
 
-
-This setting provides a clean and realistic environment for studying how geography and ownership structure interact to determine equilibrium prices. The combination of detailed price data, geographic information, and natural variation in franchise ownership allows the structural model to estimate demand and simulate counterfactual pricing outcomes under alternative ownership.
-
 \section{Empirical Strategy and Theoretical Model}
 
-The motivation for incorporating a structural model in Thomadsen’s analysis is that regressions, while useful for establishing correlations, cannot fully explain the mechanisms that determine prices. Thomadsen begins with regressions that relate prices to ownership concentration, competitor distance, and outlet attributes. These regressions show that prices are higher when nearby outlets share the same owner and lower when competing outlets are closer. This provides important empirical motivation by demonstrating that ownership and geography matter for pricing. However, the regressions have clear limitations: they cannot account for the full market layouts, and do not identify causal effects or equilibrium behavior. As Thomadsen emphasizes, these regressions cannot predict how prices would change under alternative ownership structures because they do not embed the firms’ profit maximization or the strategic interactions across outlets.
+Thomadsen first provides regressions that relate prices to ownership concentration, geographic proximity to competitors, and outlet characteristics. These regressions show clear patterns: prices are higher when nearby outlets share an owner and lower when competing outlets are located closer together. These findings provide important motivation by confirming that both ownership structure and geography matter for pricing behavior.
 
-A structural model overcomes these limitations by explicitly modeling consumer demand, geographic patterns, and firms’ pricing decisions under multi store ownership. The structural approach allows us to simulate counterfactual mergers and compute equilibrium prices under different ownership configurations. This modeling framework therefore provides a more credible and policy relevant tool for analyzing the competitive effects of mergers than reduced form regressions alone.
+However, regressions have clear limitations. They summarize correlations but do not model the full spatial layout of the market, nor do they identify causal effects or describe firms’ strategic interactions. In particular, they cannot predict how prices would change under alternative ownership structures because they do not incorporate the firms’ profit maximization problems or the way ownership influences substitution across outlets. As a result, reduced-form regressions cannot be used on their own to evaluate merger policies or simulate counterfactual scenarios.
+
+A structural model addresses these limitations by modeling consumer demand, spatial differentiation, and firms’ pricing decisions in a unified framework. This approach allows Thomadsen to uncover the mechanisms that drive pricing, such as substitution patterns, marginal costs, and the degree of spatial competition. Importantly, the structural model makes it possible to simulate hypothetical mergers and quantify their pricing effects. In doing so, it provides a more complete and policy-relevant tool for analyzing competitive outcomes than regressions alone.
 
 \subsection{Reduced Form Model}
 
@@ -106,12 +108,12 @@ Thomadsen estimates a series of regressions to show how prices vary with local c
 
 where 
 $\text{Comp}_j$ measures the number of competing outlets within a two-mile radius,
-$\text{CoOwn}_j$ measures the number (or proximity) of commonly owned outlets,
-$X_j$ includes outlet characteristics (such as drive-through or mall location), 
+$\text{CoOwn}_j$ measures the number of commonly owned outlets,
+$X_j$ includes outlet characteristics, such as drive-through or mall locations, 
 $\text{Demo}_j$ captures local demographic composition, 
 and $\varepsilon_j$ is an idiosyncratic error term.
 
-We can rewrite this in matrix form, similar to how we presented it in class, as
+We can rewrite this in matrix form, similar to how it is often presented in econometrics and mathematical economics, as
 
 \begin{equation}
 \label{eq:ols}
@@ -121,36 +123,37 @@ We can rewrite this in matrix form, similar to how we presented it in class, as
 where $\mathbf{y}$ is the vector of log prices across outlets, 
 $\mathbf{X}$ contains the covariates described above,
 and $\beta$ is the vector of regression coefficients. 
-Then, exactly as we discussed in lecture, the OLS equation is given by solving
+Then the OLS estimator is given by
 
 \begin{equation}
 \label{eq:ols_formula}
 \hat{\beta} = (\mathbf{X}^\top \mathbf{X})^{-1} \mathbf{X}^\top \mathbf{y},
 \end{equation}
 
+which highlights the linear algebra underlying least squares estimation.
+
 \subsection{Structural Model}
 
-\subsection*{Demand}
+\subsubsection{Demand}
 
-Conditional indirect utility for consumer $i$ at location $j$ is:
+To move beyond correlations, Thomadsen models consumer choice explicitly. Conditional indirect utility for consumer $i$ at location $j$ is
 
 \begin{equation}
-V_{i,j} = X^{\prime}\beta - D_{i,j}\delta - P_{j}\gamma + \eta_{i,j}
+V_{i,j} = X^{\prime}_j\beta - D_{i,j}\delta - P_{j}\gamma + \eta_{i,j},
 \end{equation}
 
+where $X^{\prime}_j$ is a vector indicating chain identity, the presence of a drive-through or play area, and whether the outlet is located in a mall. $D_{i,j}$ represents the distance between consumer $i$ and outlet $j$, and $P_j$ is the price of a meal at outlet $j$.
 
-where $X^{\prime}$ is a vector indicating chain index, if the location has a drive through or play area, and if it is located in a mall. $D_{i,j}$ represents the distance between consumer $i$ and outlet $j$. The price of a meal at outlet $j$ is denoted by $P_j$.
-
-If a consumer consumes elsewhere (other than BK or McDonald's) they have conditional utility:
+If a consumer eats elsewhere (outside McDonald's or Burger King), they receive utility
 
 \begin{equation}
-V_{i,0} = \beta_{0} + M_{i}\pi + \eta_{i,0}
+V_{i,0} = \beta_{0} + M_{i}\pi + \eta_{i,0},
 \end{equation}
 
-where $M_i$ is a vector of the consumer's age, gender, and race. The share of consumers at a particular location, $b$, and demographic type, $M$, who consume from outlet $j$ is given by
+where $M_i$ is a vector of the consumer's age, gender, and race. The share of consumers at a particular location $b$ and demographic type $M$ who consume from outlet $j$ is given by
 
 \begin{equation}
-S_{j,b}(P, X, M \mid \beta, \delta, \gamma, \pi) = \int_{A_j} f(\eta_{i})\,d\eta_{i}
+S_{j,b}(P, X, M \mid \beta, \delta, \gamma, \pi) = \int_{A_j} f(\eta_{i})\,d\eta_{i},
 \end{equation}
 
 where $P$ is the $J$-dimensional vector of prices for every outlet in the market, and
@@ -159,7 +162,9 @@ where $P$ is the $J$-dimensional vector of prices for every outlet in the market
 A_j = \{\eta_i \mid (V_{i,j} > V_{i,t} \;\forall t \neq j) \cap (V_{i,j} > V_{i,0})\}
 \end{equation}
 
-is the set of match values, $\eta_i$, between consumers and outlets such that the consumer derives a higher utility by consuming from outlet $j$ than from any other outlet $t$ or from the outside good. The fraction of consumers of demographic type $M$ located in location $b$ who choose to purchase a meal from outlet $j$ is given as
+is the set of match values $\eta_i$ such that the consumer derives higher utility from consuming at outlet $j$ than from any other outlet or from the outside good.
+
+Under the logit structure, the choice probability simplifies to
 
 \begin{equation}
 S_{j,b}(P, X, M \mid \beta, \delta, \gamma, \pi)
@@ -171,24 +176,20 @@ S_{j,b}(P, X, M \mid \beta, \delta, \gamma, \pi)
 }.
 \end{equation}
 
-Total demand for each outlet is then calculated by summing the product of the fraction of consumers of demographic $M$ and location $b$ who patronize the outlet and the mass of consumer of that demographic at that location, $h(b, M)$, across all demographic-location pairs:
+Total demand for each outlet is then calculated by summing the product of the choice probabilities and the mass of consumers of each demographic at each location:
 
 \begin{equation}
-Q_{j}(P,X \mid \beta, \delta, \gamma, \pi) = \sum_{b} \sum_{M} h(b,M)S_{j,b}(P, X, M \mid \beta, \delta, \gamma, \pi)
+Q_{j}(P,X \mid \beta, \delta, \gamma, \pi) = \sum_{b} \sum_{M} h(b,M)S_{j,b}(P, X, M \mid \beta, \delta, \gamma, \pi),
 \end{equation}
 
-Taking the partial derivative of demand with respect to price and getting the first order conditions is 
+where $h(b,M)$ is the number of consumers of type $M$ at location $b$.
+
+\subsubsection{Supply}
+
+On the supply side, assume that there are $F$ firms (franchisees), each owning a subset $F_f$ of the $j = 1,..., J$ outlets. Also assume firm costs consist of fixed costs and constant unit marginal cost. Profits for firm $f$ are then given by
 
 \begin{equation}
-\frac{\partial Q_{j}(P,X \mid \beta, \delta, \gamma, \pi)}{\partial P_k} = \frac{\partial \sum_{b} \sum_{M} h(b,M)S_{j,b}(P, X, M \mid \beta, \delta, \gamma, \pi)}{\partial P_k}
-\end{equation}
-
-\subsection*{Supply}
-
-Assume that there are $F$ firms, franchisees, each owning a subset $F_f$ of the $j = 1,..., J$ outlets. Also assume firm costs consist of fixed costs, as well as constant unit marginal cost. Firm profits to firm $f$ are then given by:
-
-\begin{equation}
-\Pi_f = \sum_{j \in F_f} (r_{k} P_{j} Q_{j}(P) - c_{j} Q_{j}(P) - FC_j)
+\Pi_f = \sum_{j \in F_f} (r_{k} P_{j} Q_{j}(P) - c_{j} Q_{j}(P) - FC_j),
 \end{equation}
 
 where $FC_j$ is the fixed cost of operating outlet $j$, 
@@ -196,8 +197,10 @@ $c_j$ is the marginal cost of a meal at outlet $j$,
 $r_k$ is the fraction of revenue that franchisees of chain $k$ retain after paying royalties, 
 and $P$ is the $J$-dimensional vector of prices for all outlets.
 
+Rewriting in terms of effective marginal cost gives
+
 \begin{equation}
-\Pi_f = \sum_{j \in F_f}(P_j Q_{j}(P) - (\frac{c_j}{r_k})Q_{j}(P) - \frac{FC_j}{r_k})
+\Pi_f = \sum_{j \in F_f}\left(P_j Q_{j}(P) - \left(\frac{c_j}{r_k}\right)Q_{j}(P) - \frac{FC_j}{r_k}\right),
 \end{equation}
 
 where 
@@ -209,23 +212,25 @@ C_j = \frac{c_j}{r_k}
 and
 
 \begin{equation}
-C_j = (C_k + \varepsilon_j)
+C_j = C_k + \varepsilon_j
 \end{equation}
 
-The firm problem on this supply side of the model is to maximize firm profits, formally:
+decomposes marginal cost into a chain-specific component $C_k$ and an outlet-specific cost shock $\varepsilon_j$.
+
+The firm’s problem on the supply side is to maximize profits:
 
 \begin{maxi*}|s|
-{}{\Pi_f = \sum_{j \in F_f}(P_j Q_{j}(P) - (\frac{c_j}{r_k})Q_{j}(P) - \frac{FC_j}{r_k})}
+{}{\Pi_f = \sum_{j \in F_f}\left(P_j Q_{j}(P) - \left(\frac{c_j}{r_k}\right)Q_{j}(P) - \frac{FC_j}{r_k}\right)}
 {}{}
 \end{maxi*}
 
-This is the exact type of problem that we work with in 414 when we covered unconstrained maximization at the beginning of the semester. As in 414, we start maximizing by taking the partial derivative, which will yield the first order conditions:
+This is the same type of unconstrained maximization problem that appears in standard microeconomic theory: firms choose prices to satisfy first-order conditions. For outlet $j$, the first-order condition under multi-store ownership can be written as
 
 \begin{equation}
-Q_{j}(P) = \sum_{r \in F_f} (P_{r} - C_{k} - \varepsilon_{r}) \frac{\partial Q_{r}(P)}{\partial P_j} = 0
+Q_{j}(P) = \sum_{r \in F_f} (P_{r} - C_{k} - \varepsilon_{r}) \frac{\partial Q_{r}(P)}{\partial P_j}.
 \end{equation}
 
-These $J$ equations can be solved for each $\varepsilon_{j}$. To do this he defines a matrix $\Omega$ as
+These $J$ equations can be solved for each $\varepsilon_{j}$. To do this, Thomadsen defines a matrix $\Omega$ as
 
 \begin{equation}
 \Omega_{j,r} = 
@@ -235,103 +240,90 @@ These $J$ equations can be solved for each $\varepsilon_{j}$. To do this he defi
 \end{cases}
 \end{equation}
 
-This simplifies the first order to condition to
+This simplifies the system of first-order conditions to
 
 \begin{equation}
-Q(P) + \Omega(P - C - \varepsilon) = 0
+Q(P) + \Omega(P - C - \varepsilon) = 0,
 \end{equation}
 
-where $Q(P)$,$C$, and $\varepsilon$ are the vectors of quantities of each of the outlets, the chain specific marginal costs, and outlet specific marginal costs respectively.
+where $Q(P)$, $C$, and $\varepsilon$ are the vectors of quantities, chain-specific marginal costs, and outlet-specific marginal costs respectively. 
 
-Like many papers that analyze private firms, Thomadsen does not have quantity data, nor is he able to take the derivative of quantity with respect to price, so instead he solves for them as a function of the above parameters which yields:
+Like many papers that analyze private firms, Thomadsen does not observe quantity data directly, nor can he compute derivatives of quantity with respect to price in closed form. Instead, he solves for them as functions of the model parameters:
 
 \begin{equation}
-Q(P, X \mid \theta) + \Omega(P, X \mid \theta)(P - C - \varepsilon) = 0
+Q(P, X \mid \theta) + \Omega(P, X \mid \theta)(P - C - \varepsilon) = 0.
 \end{equation}
 
-Rearranging again gives an expression for the cost residuals:
+Rearranging gives an expression for the cost residuals:
 \begin{equation}
 \varepsilon = P - C + \Omega(P, X \mid \theta)^{-1} Q(P, X \mid \theta).
 \end{equation}
-These residuals are what enter the Generalized Method of Moments (GMM) estimation.
 
-This condition states that, when evaluated at the true parameter values $\theta^{*}$, the expected cost residual $\varepsilon_j(\theta^*)$ must be orthogonal to the instruments $Z_j$. This relies on the instruments being uncorrelated with the unobservable cost shocks $\varepsilon$ but correlated with the demand and cost variables they are intended to influence.
+This equation is central for estimation because $\varepsilon$ is what enters the Generalized Method of Moments (GMM) procedure.
+
+\subsubsection{GMM Estimation}
+
+The structural parameters $\theta$ are estimated using GMM. The key condition is that cost shocks should be uncorrelated with a set of instruments $Z_j$:
 
 \begin{equation}
-E[\varepsilon_{j}(\theta^{*}) \mid Z_j] = 0
+E[\varepsilon_{j}(\theta^{*}) \mid Z_j] = 0.
 \end{equation}
 
-Each row in the following system corresponds to a different demographic instrument, such as the fraction of nearby consumers in a particular age group, gender category, or racial group. Because these characteristics shift demand patterns but are exogenous to marginal costs, they provide variation that helps identify the structural parameters.
+The sample analog is
 
-\begin{subequations}
-\label{}
+\begin{equation}
+G_J(\theta) 
+= \frac{1}{J} \sum_{j=1}^{J} Z_j \, \varepsilon_j(\theta).
+\end{equation}
 
-\begin{align}
-G_J(\theta) 
-&= \frac{1}{J} \sum_{j=1}^{J} Z_j \, \varepsilon_j(\theta)
-\label{}
-\\[8pt]
-G_J(\theta) 
-&= \frac{1}{J} \sum_{j=1}^{J}
-    \left[
-        R_{18\text{-}29}
-        \frac{Q_j(M_{\text{Age}},\theta)}{\text{Pop}(M_{\text{Age}})}
-        \;-\;
-        R_{\text{Age}}
-        \frac{Q_j(M_{18\text{-}29},\theta)}{\text{Pop}(M_{18\text{-}29})}
-    \right]
-\label{}
-\\[8pt]
-G_J(\theta) 
-&= \frac{1}{J} \sum_{j=1}^{J}
-    \left[
-        R_{\text{Male}}
-        \frac{Q_j(M_{\text{Female}},\theta)}{\text{Pop}(M_{\text{Female}})}
-        \;-\;
-        R_{\text{Female}}
-        \frac{Q_j(M_{\text{Male}},\theta)}{\text{Pop}(M_{\text{Male}})}
-    \right]
-\label{}
-\\[8pt]
-G_J(\theta) 
-&= \frac{1}{J} \sum_{j=1}^{J}
-    \left[
-        R_{\text{Black}}
-        \frac{Q_j(M_{\text{White}},\theta)}{\text{Pop}(M_{\text{White}})}
-        \;-\;
-        R_{\text{White}}
-        \frac{Q_j(M_{\text{Black}},\theta)}{\text{Pop}(M_{\text{Black}})}
-    \right]
-\label{}
-\end{align}
+Each row in this system corresponds to a different demographic instrument, such as the fraction of nearby consumers in a particular age group, gender category, or racial group. Because these characteristics shift demand patterns but are exogenous to marginal costs, they provide variation that helps identify the structural parameters.
 
-\end{subequations}
-
-These moment conditions collectively determine the GMM objective function, which selects the parameter vector $\hat{\theta}$ that makes the empirical moments as close to zero as possible. Solving the problem:
+These moment conditions collectively determine the GMM objective function, which selects the parameter vector $\hat{\theta}$ that makes the empirical moments as close to zero as possible. Formally, the estimator solves
 
 \begin{argmini}
-{\hat{\theta}}{G_{J}(\theta)^{\prime} AG_{J}(\theta)}
-{}{}
+{\hat{\theta}}{G_{J}(\theta)^{\prime} AG_{J}(\theta)}{}{}
 \end{argmini}
 
-This is no different than any of the minimization problems that we have worked with in our class, the only difference being that we want to find the argument, $\hat{\theta}$ that minimizes the objective. Conceptually, we want to find the parameters so that the predicted cost shocks generated by the structural model are orthogonal to demographic variation. The moment conditions complete the bridge between the observed data, the theoretical model, and the equilibrium pricing behavior that the paper seeks to quantify.
+for a positive definite weighting matrix $A$. Conceptually, we want to find the parameters so that the predicted cost shocks generated by the structural model are orthogonal to demographic variation. The moment conditions complete the bridge between the observed data, the theoretical model, and the equilibrium pricing behavior that the paper seeks to quantify.
 
-\subsection{Results}
+\section{Results}
 
 The regression estimates in Table~\ref{tab:regression} provide evidence that both 
 ownership structure and geographic proximity shape equilibrium prices. Outlets located near a 
-larger number of competing McDonald's or Burger King stores charge lower prices, which is consistent with standard competition. In contrast, outlets that have a greater number of 
-commonly owned stores within two miles charge higher prices. This suggests that multi store 
-owners internalize effects across their own outlets, softening competitive 
-pressure and raising optimal prices. Geographic distance reinforces these patterns: being closer 
-to a competitor lowers prices, while being closer to a co-owned outlet raises them. These results 
-establish the empirical motivation for the structural model by showing that both competition and 
-ownership concentration have economically meaningful effects on pricing.
+larger number of competing McDonald's or Burger King stores charge lower prices, which is consistent with standard competitive pressure. In contrast, outlets that have a greater number of 
+commonly owned stores within two miles charge higher prices. Geographic distance reinforces these patterns: being closer to a competitor lowers prices, while being closer to a co-owned outlet raises them. These results establish the empirical motivation for the structural model by showing that both competition and ownership concentration have economically meaningful effects on pricing.
+
+The structural estimates reinforce the regression findings by quantifying the substitution patterns 
+that drive pricing incentives. The demand parameters imply that consumers are highly sensitive to 
+geographic distance, showing that spatial differentiation is a key source of market power. The estimated price sensitivity parameter shows that consumers respond strongly to price differences across 
+outlets, amplifying the effect of multi-store ownership. If two nearby outlets share an owner, that 
+owner internalizes the substitution between them and raises prices accordingly. 
+
+The estimated marginal costs vary across chains and outlet characteristics. The cost shocks ($\varepsilon_j$) are centered near zero when evaluated at the estimated parameters, indicating that the model and instruments satisfy the GMM moment conditions.
+
+\subsection*{Merger Simulations and Counterfactual Experiments}
+
+Thomadsen conducts several experiments that examine how prices change when previously independent franchisees merge.
+
+\paragraph{Mergers between nearby outlets}
+When two nearby outlets merge, equilibrium prices increase substantially. Because consumers view nearby outlets as close substitutes, a merged owner has the ability to raise prices at one store without losing as many customers to the other. This is the mechanism through which multi-store ownership raises prices.
+
+\paragraph{Mergers between distant outlets}
+Surprisingly, mergers also raise prices even when outlets are far enough apart that they would not 
+compete strongly under separate ownership. This occurs because changing ownership structure 
+changes the entire pricing equilibrium. Even distant stores contribute to the profit maximization 
+problem of the merged firm. This result shows that the effects of mergers extend beyond 
+immediate geographic neighborhoods and cannot be captured by simple distance rules.
+
+\paragraph{Chain-level differences}
+The simulations show that mergers among McDonald's lead to much larger price increases 
+than mergers among Burger King outlets. This reflects different substitution patterns and marginal costs 
+across chains.
 
 \begin{table}[H]
 \centering
 \begin{threeparttable}
-\caption{Descriptive Regression Results \\ \small Dependent Variable: $\log(\text{Price})$}
+\caption{Descriptive Regression Results. \\ \small Dependent Variable: $\log(\text{Price})$.}
 \label{tab:regression}
 \small
 
@@ -363,67 +355,30 @@ $R^2$                               & 0.513         &         \\
 \end{threeparttable}
 \end{table}
 
-The structural estimates reinforce the regression findings by quantifying the substitution patterns 
-that drive pricing incentives. The demand parameters imply that consumers are highly sensitive to 
-geographic distance, showing that spatial differentiation is a key source of market power. The estimated 
-price sensitivity parameter shows that consumers respond strongly to price differences across 
-outlets, amplifying the effect of multi-store ownership: if two nearby outlets share an owner, that 
-owner internalizes the substitution between them and raises prices accordingly. 
-
-The estimated marginal costs vary across chains and outlet characteristics in ways consistent with 
-industry intuition. The recovered cost shocks ($\varepsilon_j$) are centered near zero when 
-evaluated at the estimated parameters, indicating that the model and instruments satisfy the GMM 
-moment conditions.
-
-\subsection*{Merger Simulations and Counterfactual Experiments}
-
-Thomadsen conducts several experiments that examine how prices change when previously independent franchisees merge.
-
-\paragraph{Mergers between nearby outlets}
-When two nearby outlets become jointly owned, equilibrium prices increase substantially. Because consumers view nearby outlets as close substitutes, a merged owner gains the ability to raise prices at one store without losing as many customers to the other. This is the mechanism through which multi-store ownership raises prices.
-
-\paragraph{Mergers between distant outlets}
-Surprisingly, mergers also raise prices even when outlets are far enough apart that they would not 
-compete strongly under separate ownership. This occurs because changing ownership structure 
-alters the entire pricing equilibrium: even distant stores contribute to the profit maximization 
-problem of the merged firm. This result shows that the effects of consolidation extend beyond 
-immediate geographic neighborhoods and cannot be captured by simple distance rules.
-
-\paragraph{Chain-level differences.}
-The simulations show that mergers among McDonald's lead to much larger price increases 
-than mergers among Burger King's. This reflects different substitution patterns and marginal costs 
-across chains.
-
 \section{Discussion}
 
-Thomadsen’s paper has many strengths. First, he provides one of the earliest structural models that includes spatial differentiation with multi-store ownership, allowing for a 
-better understanding of this topic. The paper demonstrates how regressions and structural methods complement each another. The regressions establish the empirical patterns, while the structural model clarifies the mechanisms behind those patterns. Second, the paper’s counterfactual simulations give direct policy relevance. By showing that mergers raise prices even when outlets are geographically distant, his analysis shows the importance of focusing attention on regulating such events. Third, his model makes good use of limited data through GMM estimation, combining demographic variation, distance 
-patterns, and equilibrium conditions to find economically meaningful parameters.
+Thomadsen’s paper has many strengths. First, he provides one of the earliest structural models that combines spatial differentiation with multi-store ownership, offering a richer understanding of pricing behavior in franchise markets. The paper demonstrates how regressions and structural methods complement one another: the regressions establish empirical patterns, while the structural model clarifies the mechanisms behind those patterns. Second, the paper’s counterfactual simulations give the analysis direct policy relevance. By showing that mergers raise prices even when outlets are geographically distant, his results highlight the importance of looking beyond simple distance thresholds in merger review. Third, the model makes good use of limited data by leveraging demographic instruments, spatial structure, and equilibrium conditions.
 
-Even though his paper is powerful, the paper also has limitations. One concern is that consumers are modeled as choosing between only two fast food chains and the outside option. In reality, consumers have a much wider variety to choose from, and not including them may overstate substitution between  
-McDonald’s and Burger King. Additionally, his model assumes that marginal costs are constant within 
-each chain. This may overlook important cost differences, such as differences in labor markets, input prices, or leadership quality. Another limitation is the data. Without variation over time, it is difficult to disentangle structural relationships from unobserved local characteristics.
+The paper also has limitations. One limitation is that consumers choose between only two fast food chains and the outside option. In reality, consumers face a much wider menu of alternatives, and omitting these options may overstate substitution between  
+McDonald’s and Burger King. Additionally, the model assumes that marginal costs are constant within 
+each chain. This could overlook important cost differences, such as differences in labor markets, input prices, or management quality. Another limitation is the cross-sectional nature of the data. Without variation over time, it is difficult to separate structural relationships from unobserved local characteristics.
 
-Future research could address these in several ways. First, incorporating additional fast food chains or sit down restaurants would provide a more realistic representation of consumer choices. Second, collecting panel data would allow for more strategies that control for unobserved heterogeneity, including store fixed effects. Third, researchers could examine dynamic pricing incentives, which are left out of his static model. , extensions could explore how online ordering or delivery services alter competition and the results of his paper.
+Future research could address these limitations in several ways. First, incorporating additional fast food chains or sit-down restaurants would provide a more realistic representation of consumer choices. Second, collecting panel data would allow for strategies that control for unobserved heterogeneity, including store fixed effects. Third, researchers could examine dynamic pricing incentives, which are left out of the static model. Extensions could also explore how online ordering or delivery services alter competition and modify the results of the paper.
 
 Overall, while the model is necessarily simplified, it provides a powerful framework for studying how 
 mergers in differentiated product markets affect equilibrium outcomes.
 
 \section{Conclusion}
 
-Thomadsen’s paper provides a clear and powerful answer to an important question in industrial 
-organization: how does ownership structure interact with geographic differentiation to shape 
-equilibrium prices? Using a combination of regressions and a structural model of demand and supply, the paper shows that multi-store ownership substantially increases prices, and that the magnitude of these effects depends on how closely consumers view outlets as substitutes. The structural simulations further reveal that consolidation influences pricing even across outlets that do not directly compete under separate ownership.
+Thomadsen’s paper answers an important question in industrial organization: how does ownership structure interact with geographic differentiation to shape equilibrium prices? Using regressions and a structural model of demand and supply, the paper shows that multi-store ownership increases prices and that the magnitude of these effects depends on how closely consumers view outlets as substitutes. The simulations reveal that mergers influence pricing even across outlets that do not directly compete under separate ownership.
 
-These findings have direct implications for antitrust policy. Traditional approaches that define 
-markets using simple geographic thresholds may underestimate the consequences of mergers, 
-especially in industries where consumers' substitution patterns are highly localized. By integrating 
-theoretical structure with empirical data, the paper offers a better framework for evaluating 
-competitive effects and provides a foundation for more sophisticated analysis.
+These findings have direct implications for antitrust policy. Approaches that define 
+markets using simple geographic rules may underestimate the consequences of mergers. By integrating 
+theoretical structure with empirical data, the paper offers a better framework for evaluating competitive effects and provides a foundation for more sophisticated analysis.
 
-The mathematics used in the paper align closely with the tools we learned in ECO 414. The firm's pricing problem is formulated as an unconstrained maximization problem, solved through first-order conditions; the vectors of prices, quantities, and marginal costs mirror the vector notation we used in class; and the ownership matrix $\Omega$ is a direct application of linear algebra to represent firm decisions. Even the GMM on minimizing a quadratic form in the moment conditions, which is conceptually the same type of optimization problem we practiced.
+The mathematics used in the paper align closely with standard tools in mathematical economics. The firm's pricing problem is formulated as an unconstrained maximization problem, solved through first-order conditions. The vectors of prices, quantities, and marginal costs mirror the vector notation used in linear algebra, and the ownership matrix $\Omega$ is a direct application of matrix methods to represent firm decisions across multiple outlets. Even the GMM estimator relies on minimizing a quadratic form in the moment conditions, which is structurally similar to least squares and other optimization problems.
 
-Overall, the paper illustrates how the mathematical tools of optimization and linear algebra can be combined to answer economically meaningful questions. Thomadsen's study illustrates the value of structural methods in applied microeconomics and highlights how economic modeling can give insights that go beyond patterns in the data. The paper contributes both methodologically and substantively to our understanding of pricing in differentiated product markets.
+Overall, the paper illustrates how the mathematical tools of optimization and linear algebra can be combined to answer economically meaningful questions. Thomadsen's study shows the value of structural methods in applied microeconomics and demonstrates how economic modeling can provide insights that go beyond reduced-form patterns in the data. The paper contributes both methodologically and substantively to our understanding of pricing in differentiated product markets.
 
 \nocite{*}
 \bibliographystyle{apalike}
